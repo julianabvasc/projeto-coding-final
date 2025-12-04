@@ -83,7 +83,7 @@ Exemplo de corpo (POST/PUT):
 
 4.1 Clonar o Repositório
 
-git clone https://github.com/SEU-USUARIO/SEU-REPO.git
+*git clone https://github.com/SEU-USUARIO/SEU-REPO.git*
 
 4.2 Configurar o Banco de Dados
 
@@ -93,31 +93,34 @@ git clone https://github.com/SEU-USUARIO/SEU-REPO.git
 
 4.5 Executar os inserts iniciais (se aplicável)
 
-cd backend
-npm install
+*cd backend*
+
+*npm install*
 
 
 4.6 Iniciar o Servidor
-npm start
+
+
+*npm start*
 
 
 ou
 
-nodemon server.js
+*nodemon server.js*
 
 4.7 Testar os Endpoints
 
 Utilize o Insomnia ou Postman enviando requisições para:
 
-http://localhost:3000/api
+*http://localhost:3000/api*
 
 4.8 Frontend
 
 Abra o arquivo:
 
-frontend/index.html
+*frontend/index.html*
 
 
 E certifique-se de que a URL da API está configurada como:
 
-http://localhost:3000/api
+*http://localhost:3000/api*
