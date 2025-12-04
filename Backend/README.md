@@ -1,110 +1,123 @@
-📄 README – Backend PI: Agrosustenta (Sistema de Gerenciamento)
+# Backend PI – Agrosustenta
 
-Este repositório contém o backend do projeto Agrosustenta, focado no gerenciamento de Armazéns, Distribuição, Lotes, Sementes e Relacionamentos entre entidades.
-Aqui você encontra um CRUD completo, arquitetura modular e APIs REST organizadas no padrão corporativo.
+Este repositório contém o backend do projeto **Agrosustenta**, desenvolvido em Node.js + Express com MySQL.  
+O objetivo é gerenciar Armazéns, Cooperativas, Distribuição, Lotes, Estoque, Sementes e Relacionamentos entre entidades, utilizando CRUD completo e arquitetura modular.
 
-💡 Visão Geral
+---
 
-O projeto é uma API REST desenvolvida em Node.js + Express + MySQL, responsável por gerenciar os dados centrais da plataforma Agrosustenta.
-A aplicação implementa CRUD em todas as entidades, incluindo tabelas com chave primária composta, chaves estrangeiras e relacionamento M:N.
+## 1. Visão Geral
 
-Entidades Principais
+O sistema implementa:
 
-Armazém
+- API REST completa
+- CRUD em todas as entidades
+- Modelagem com chaves compostas e estrangeiras
+- Relacionamento M:N (Distribuicao_Armazem)
+- Estrutura organizada por módulos de rotas
 
-Cooperativa
+---
 
-Distribuição
+## 2. Tecnologias Utilizadas
 
-cadastroDeLote
+| Categoria       | Tecnologia | Versão |
+|-----------------|------------|--------|
+| Linguagem       | JavaScript | ES6+   |
+| Runtime         | Node.js    | 16+    |
+| Framework       | Express.js | Estável |
+| Banco de Dados  | MySQL      | 8.0    |
+| Driver          | mysql2     | Estável |
+| Utilitários     | nodemon, cors | — |
+| Gerenciador     | npm ou yarn | — |
+| Ferramentas     | VS Code, Insomnia, DBeaver/MySQL Workbench | — |
 
-Estoque
-
-Sementes
-
-Rastreio
-
-Distribuicao_Armazem (tabela de junção M:N)
-
-⚙️ Tecnologias Utilizadas
-Categoria	Tecnologia	Versão
-Linguagem	JavaScript	ES6+
-Runtime	Node.js	16+
-Framework	Express.js	Última estável
-Banco de Dados	MySQL	8.0
-Driver	mysql2	Última estável
-Utilidades	nodemon, cors	Estáveis
-Gerenciador	npm ou yarn	—
-Ferramentas	VS Code, Insomnia, MySQL Workbench/DBeaver	—
+---
 
 
-🌐 Endpoints Principais (Padrão REST CRUD)
+## 3. Endpoints da API (Padrão REST)
 
-Endpoint base:
+O endpoint base para todas as rotas é:
 
-http://localhost:3000/api
+http://localhost:3000/api/
 
-1. Autenticação (Sugerida)
+## 3.1 Autenticação
 Método	Endpoint	Função
 POST	/auth/login	Autentica e retorna token
 
-Exemplo (POST):
+Exemplo de corpo:
 
 {
   "usuario": "admin",
   "senha": "123"
 }
 
-2. Armazém – Exemplo de CRUD
-Método	Endpoint	Função
-GET	/armazens	Lista todos
-GET	/armazens/{id}	Busca por ID
-POST	/armazens	Cria novo
-PUT	/armazens/{id}	Atualiza
-DELETE	/armazens/{id}	Remove
+## 3.2 Armazém (CRUD Completo)
 
-Corpo (POST/PUT):
+| Método | Endpoint       | Função                  |
+| ------ | -------------- | ----------------------- |
+| GET    | /armazens      | Lista todos os armazéns |
+| GET    | /armazens/{id} | Busca por ID            |
+| POST   | /armazens      | Cria novo armazém       |
+| PUT    | /armazens/{id} | Atualiza armazém        |
+| DELETE | /armazens/{id} | Remove armazém          |
+
+Exemplo de corpo (POST/PUT):
 
 {
-  "nome": "Armazém Exemplo"
+  "nome": "Armazém Central"
 }
 
-3. Endpoints de Outras Entidades
-Entidade	Base Endpoint
-Cooperativa	/cooperativas
-Distribuição	/distribuicao
-cadastroDeLote	/lotes
-Estoque	/estoque
-Sementes	/sementes
-Rastreio	/rastreio
-Distribuicao_Armazem	/distribuicao-armazem (DELETE via query string)
-🚀 Como Iniciar
-1. Clone o Repositório
+## 3.3 Outros Recursos
+
+| Entidade             | Endpoint Base         |
+| -------------------- | --------------------- |
+| Cooperativa          | /cooperativas         |
+| Distribuição         | /distribuicao         |
+| Lotes                | /lotes                |
+| Estoque              | /estoque              |
+| Sementes             | /sementes             |
+| Rastreio             | /rastreio             |
+| Distribuicao_Armazem | /distribuicao-armazem |
+
+
+## 4. Como Iniciar o Projeto
+
+4.1 Clonar o Repositório
+
 git clone https://github.com/SEU-USUARIO/SEU-REPO.git
 
-2. Configure o Banco de Dados
+4.2 Configurar o Banco de Dados
 
-Crie o banco: agrosustenta
+4.3 Criar o banco chamado agrosustenta
 
-Execute o DER + inserts iniciais
+4.4 Executar o script de criação das tabelas
 
-3. Instale as Dependências
+4.5 Executar os inserts iniciais (se aplicável)
+
 cd backend
 npm install
 
-4. Inicie o Servidor
+
+4.6 Iniciar o Servidor
 npm start
-# ou
+
+
+ou
+
 nodemon server.js
 
-5. Teste com Insomnia
+4.7 Testar os Endpoints
 
-Envie requisições para:
+Utilize o Insomnia ou Postman enviando requisições para:
 
 http://localhost:3000/api
 
-6. Frontend
+4.8 Frontend
 
-Abra frontend/index.html e confira se o JS está apontando para:
+Abra o arquivo:
+
+frontend/index.html
+
+
+E certifique-se de que a URL da API está configurada como:
 
 http://localhost:3000/api
