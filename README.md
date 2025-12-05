@@ -1,71 +1,85 @@
-# 🌱 AgroSustenta
+🌾 AgroSustenta
 
-O **Agro Sustenta** é uma **plataforma web** para produtores rurais e cooperativas com foco na **rastreabilidade, controle e sustentabilidade** no uso e distribuição de sementes. Nosso objetivo é **centralizar informações agrícolas** como processos de fecundação, clima, características de sementes e rastreamento completo da distribuição para **melhorar o planejamento de plantio** e **reduzir perdas**.
+AgroSustenta é uma plataforma web voltada para o rastreamento, controle e avaliação das distribuições de sementes realizadas por cooperativas, armazéns e pela administração do IPA (Instituto Agronômico de Pernambuco).
+Nosso objetivo é promover transparência, eficiência e sustentabilidade no processo de distribuição de sementes para os produtores rurais, garantindo que os insumos cheguem dentro da validade e de forma organizada.
 
----
+🚀 Objetivo do Projeto
 
-## 👩‍💻 Equipe desenvolvedora
+A AgroSustenta foi desenvolvida para digitalizar e otimizar o processo de distribuição de sementes, permitindo que os gestores e cooperativas possam:
 
-* **Dayane Oliveira**
-* **Ingrid Isabelle**
-* **Juliana Vasconcelos**
-* **Julliane Valentin**
-* **Ludmilla Arlane**
+Rastrear cada lote de sementes desde o armazém até o produtor rural;
 
----
+Monitorar datas de validade e status de entrega em tempo real;
 
-## ⚙️ Tecnologias utilizadas
+Receber alertas quando um lote estiver próximo da validade;
 
-O projeto foi construído como uma aplicação Full-Stack, utilizando o seguinte stack de tecnologias:
+Facilitar a comunicação entre cooperativas, armazéns e administração do IPA;
 
-### 🌐 Frontend
+Gerar relatórios e indicadores de desempenho das distribuições.
 
-| Tecnologia | Função Principal |
-| :--- | :--- |
-| **HTML5** | Estrutura e marcação do conteúdo da web. |
-| **CSS3** | Estilização, layout e design responsivo. |
-| **JavaScript** | Lógica de interação do lado do cliente e comunicação com a API. |
+👥 Público-Alvo
+Usuário	Função
+🧑‍💼 Administradores do IPA	Acompanham, avaliam e aprovam as distribuições realizadas.
+🏢 Armazéns	Gerenciam os estoques, organizam as saídas e monitoram as validades das sementes.
+🤝 Cooperativas	Fazem a ponte entre o IPA e os produtores rurais, realizando a entrega das sementes.
+🌱 Produtores Rurais	Recebem as sementes e podem acompanhar a origem e o status de suas entregas.
+🧩 Funcionalidades Principais
 
-### 💻 Backend e banco de dados
+📦 Gestão de Lotes: cadastro, rastreamento e histórico de movimentação;
 
-| Tecnologia | Função Principal |
-| :--- | :--- |
-| **Node.js** | Ambiente de execução JavaScript do lado do servidor. |
-| **Express.js** | Framework para construir a API REST que conecta o frontend ao banco de dados. |
-| **MySQL** | Sistema de Gerenciamento de Banco de Dados Relacional (SGBDR) para persistência e gestão dos dados do sistema de sementes. |
+⏰ Monitoramento de Validade: alertas automáticos para produtos próximos da expiração;
 
----
+🚚 Status de Entregas: atualização em tempo real sobre pedidos e entregas concluídas;
 
-## 💡 Funcionalidades principais
+📊 Painel Administrativo: gráficos e indicadores sobre distribuições e desempenho;
 
-O sistema **AgroSustenta** oferece um conjunto de funcionalidades essenciais para o gerenciamento de sementes:
+📍 Localização e Rota: acompanhamento da origem e destino dos lotes;
 
-* **Cadastro de sementes e lotes:** registro detalhado de cada tipo de semente e dos lotes recebidos, incluindo espécie, quantidade, e validade.
-* **Gestão de armazém e estoque:** controle físico e lógico do local de armazenamento e das entradas/saídas de lotes.
-* **Registro de distribuição:** criação de pedidos de saída de sementes para entrega.
-* **Rastreamento completo:** acompanhamento do percurso da semente desde o armazém até o destinatário final.
-* **Validação por cooperativa:** confirmação e finalização do processo de entrega pela organização parceira.
+🧾 Histórico de Distribuição: registro completo de cada entrega realizada.
 
----
+🖥️ Protótipo
 
-## 🔄 Fluxo de dados simplificado
+🔗 Veja o protótipo do AgroSustenta no Figma:
+👉 Acessar protótipo no Figma
 
-O fluxo de dados da aplicação segue o modelo Full-Stack tradicional, integrando as camadas de apresentação, lógica de negócios e persistência:
+🛠️ Tecnologias Utilizadas
 
-1.  **Frontend (HTML/CSS/JS):** coleta dados do usuário ou solicita dados para exibição.
-2.  **Comunicação (JavaScript):** envia requisições HTTP como `GET`, `POST` para a API.
-3.  **Backend (Node.js/Express.js):** recebe a requisição, executa a lógica de negócios e conecta-se ao **MySQL** para realizar a operação.
-4.  **Banco de dados (MySQL):** armazena e retorna os dados.
-5.  **Resposta:** o backend envia a resposta de volta ao frontend para **atualizar a interface**.
+Frontend: HTML5, CSS3, JavaScript
 
----
+Backend: Python (Flask ou Django)
 
-## 🚀 Como executar
+Banco de Dados: MySQL
 
-Para rodar este projeto localmente, siga os passos abaixo:
+Design e UI: Figma
 
-1.  Clone o repositório;
-2.  Instale as dependências do Node.js/Express (npm install);
-3.  Configure o banco de dados MySQL e as credenciais de conexão no backend;
-4.  Inicie o servidor Node.js/Express;
-5.  Abra o arquivo index.html no navegador.
+Controle de Versão: Git e GitHub
+
+🧠 Benefícios do Sistema
+
+Redução de perdas por vencimento de sementes;
+
+Aumento da transparência nas distribuições;
+
+Melhoria na comunicação entre entidades;
+
+Automação de relatórios e indicadores de desempenho;
+
+Suporte à sustentabilidade e rastreabilidade no setor agro.
+
+🌍 Impacto Sustentável
+
+A AgroSustenta contribui para o Desenvolvimento Sustentável ao:
+
+Evitar desperdício de sementes e insumos agrícolas;
+
+Incentivar a rastreabilidade e a responsabilidade nas distribuições;
+
+Promover a eficiência logística e o uso consciente de recursos públicos.
+
+🧑‍💻 Equipe de Desenvolvimento
+
+Design de Interface: Protótipo desenvolvido no Figma
+
+Desenvolvimento Web: Equipe AgroSustenta
+
+Supervisão Técnica: Instituto Agronômico de Pernambuco (IPA)
